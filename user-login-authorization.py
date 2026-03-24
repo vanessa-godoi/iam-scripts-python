@@ -23,4 +23,4 @@ if user_input in users and users[user_input]["password"] == password_input:
         print("You don't have permissions attached")
 
 else:
-    print("Wrong username or password, contact the administrator.")
+    print("Wrong username or password, contact the administrator!")
