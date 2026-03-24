@@ -1,6 +1,7 @@
 users = {
-    "joao": {"password": "123456", "role": "user"},
-    "maria": {"password": "abcdef", "role": "admin"}
+    "joao": {"password": "123456", "role": "writer"},
+    "maria": {"password": "abcdef", "role": "admin"},
+    "carlos": {"password": "999999", "role": "viewer"}
 }
 
 user_input = input("Write the username: ")
@@ -13,8 +14,13 @@ if user_input in users and users[user_input]["password"] == password_input:
 
     if role == "admin":
         print("You have owner privileges")
-    else:
+    elif role == "writer":
         print("You have writing privileges")
+    elif role == "viewer":
+        print("You have viewer privileges")
+
+    else:
+        print("You don't have permissions attached")
 
 else:
     print("Wrong username or password, contact the administrator.")
